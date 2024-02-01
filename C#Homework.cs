@@ -1,4 +1,5 @@
-﻿// //Homework Task 1
+// //Homework Task 1
+/////////////////////         Show the horse strokes in the matrix [8,8]
 
 
 // class Program
@@ -47,7 +48,7 @@
 // ----------------------------------------------------------------------------------------------------------------------------------
 
 // //Homework Task 2
-
+/////////////////////////             Show the queen strokes in the matrix [8,8]
 // class Program
 // {
 //     static void Main()
@@ -106,7 +107,7 @@
 // ----------------------------------------------------------------------------------------------------------------------------------
 
 // //Homework Task 3
-
+///////////////////////             Randomly place queens on the chessboard so that they do not hit each other.
 // class Program
 // {
 //     static Random random = new Random();
@@ -173,7 +174,7 @@
 // ----------------------------------------------------------------------------------------------------------------------------------
 
 // //Hpmework Task 4
-
+///////////////////////////      The horse (knight) will step from the mentioned field with random free fields once.
 
 // class Program
 // {
@@ -260,6 +261,10 @@
 
 
 //Homework Task 5
+                    /*Saddle point. Given an MxN integer size matrix.
+                    Determine and find the matrix element that is largest in its row and smallest in its column.
+                    If no such element exists, display the message "no".*/
+
 
 // class SaddlePoint {
 
@@ -311,8 +316,10 @@
 //----------------------------------------------------------------------------------------------------------------------------------
 
 
-//Homework Task 6
-// class RandomMatrixFill
+// // Homework Task 6
+/////////////////////          Randomly fill non-repeating numbers in an NxM matrix.
+
+// class RandomFill
 // {
 //     static void Main()
 //     {
