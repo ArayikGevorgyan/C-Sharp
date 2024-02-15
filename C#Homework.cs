@@ -387,3 +387,241 @@
 //         }
 //     }
 // }
+
+
+//----------------------------------------------------------------------------------------------------------------------------------
+
+// // Homework Task 7
+/* Queen placement in Matrix [8,8] with heuristic method. Place queens on a chessboard so that
+they do not hit each other, using the heuristic of maximum free for queen fields. Display the current results
+of the heuristic run.*/
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         char[,] matrix = new char[8, 8];
+//         for (int i = 0; i < 8; i++)
+//         {
+//             for (int j = 0; j < 8; j++)
+//             {
+//                 matrix[i, j] = '1';
+//             }
+//         }
+
+//         Console.WriteLine("Matrix 0:");
+//         PrintMatrix(matrix);
+
+//         int queenCount = 0; 
+        
+//         while (HasFP(matrix))
+//         {
+//             int randomX, randomY;
+//             do
+//             {
+//                 Random random = new Random();
+//                 randomX = random.Next(8);
+//                 randomY = random.Next(8);
+//             } while (matrix[randomX, randomY] != '1');
+
+            
+//             matrix[randomX, randomY] = '#';
+
+            
+//             MarkCells(matrix, randomX, randomY);
+
+//             queenCount++;
+//             Console.WriteLine($"Matrix {queenCount} ({randomX}, {randomY}):");
+//             PrintMatrix(matrix);
+//         }
+//     }
+
+//     static void PrintMatrix(char[,] matrix)
+//     {
+//         for (int i = 0; i < 8; i++)
+//         {
+
+//             for (int j = 0; j < 8; j++)
+//             {
+//                 Console.Write(matrix[i, j] + " ");
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.WriteLine();
+//     }
+
+//     static void MarkCells(char[,] matrix, int queenX, int queenY)
+//     {
+    
+//         for (int i = 0; i < 8; i++)
+//         {
+//             if (matrix[queenX, i] != '#') 
+//                 matrix[queenX, i] = '0';
+
+//             if (matrix[i, queenY] != '#')
+//                 matrix[i, queenY] = '0';
+//         }
+
+        
+//         for (int i = queenX - 1, j = queenY - 1; 
+//         i >= 0 && j >= 0; i--, j--)
+//         {
+//             if (matrix[i, j] != '#') 
+//                 matrix[i, j] = '0';
+//         }
+//         for (int i = queenX + 1, j = queenY + 1; 
+//         i < 8 && j < 8; i++, j++)
+//         {
+//             if (matrix[i, j] != '#') 
+//                 matrix[i, j] = '0';
+//         }
+
+        
+//         for (int i = queenX - 1, j = queenY + 1;
+//         i >= 0 && j < 8; i--, j++)
+//         {
+//             if (matrix[i, j] != '#')
+//                 matrix[i, j] = '0';
+//         }
+//         for (int i = queenX + 1, j = queenY - 1;
+//         i < 8 && j >= 0; i++, j--)
+//         {
+//             if (matrix[i, j] != '#')
+//                 matrix[i, j] = '0';
+//         }
+//     }
+
+//     static bool HasFP(char[,] matrix)
+//     {
+        
+//         foreach (char cell in matrix)
+//         {
+
+//             if (cell == '1')
+//                 return true;
+//         }
+//         return false;
+//     }
+// }
+
+//----------------------------------------------------------------------------------------------------------------------------------
+
+// // // Homework Task 8
+/* Knight moving in Matrix [8,8] with heuristic method. Any next move of the knight in the free
+field is selected by a special template with mninimum value. Template is the number of knight moves in the
+initial chessboard. Display the current results of the heuristic run. Explanation in more detail in the
+classroom.
+*/
+
+
+// class Program
+// {
+//     static int[] dx = { 2, 1, -1, -2, -2, -1, 1, 2 };
+//     static int[] dy = { 1, 2, 2, 1, -1, -2, -2, -1 };
+
+//     static void Main(string[] args)
+//     {
+//         int[,] chessboard = new int[8, 8];
+//         int totalSteps = 0;
+
+//         Console.WriteLine("Enter coordinates for the figure (x, y):");
+//         int x = int.Parse(Console.ReadLine()) - 1;
+//         int y = int.Parse(Console.ReadLine()) - 1;
+
+//         if (x >= 0 && x < 8 && y >= 0 && y < 8)
+//         {
+//             FillChessboard(chessboard);
+
+//             chessboard[x, y] = -1;
+
+//             PrintChessboard(chessboard, x, y);
+
+//             while (true)
+//             {
+//                 int minMoves = int.MaxValue;
+//                 int newX = -1, newY = -1;
+//                 for (int i = 0; i < 8; i++)
+//                 {
+//                     int nextX = x + dx[i];
+//                     int nextY = y + dy[i];
+//                     if (IsValidMove(nextX, nextY) && chessboard[nextX, nextY] > 0)
+//                     {
+//                         int moves = chessboard[nextX, nextY];
+//                         if (moves < minMoves)
+//                         {
+//                             minMoves = moves;
+//                             newX = nextX;
+//                             newY = nextY;
+//                         }
+//                     }
+//                 }
+
+//                 if (newX == -1 && newY == -1)
+//                     break;
+
+//                 x = newX;
+//                 y = newY;
+//                 chessboard[x, y] = -1;
+//                 totalSteps++;
+
+//                 Console.WriteLine("\nThe knight has moved:");
+//                 PrintChessboard(chessboard, x, y);
+//             }
+
+//             Console.WriteLine($"\nTotal steps is : {totalSteps + 1}");
+//         }
+//         else
+//         {
+//             Console.WriteLine("Coordinates are outside from the chessboard.");
+//         }
+//     }
+
+//     static bool IsValidMove(int x, int y)
+//     {
+//         return x >= 0 && x < 8 && y >= 0 && y < 8;
+//     }
+
+//     static void FillChessboard(int[,] chessboard)
+//     {
+//         for (int i = 0; i < 8; i++)
+//         {
+//             for (int j = 0; j < 8; j++)
+//             {
+//                 chessboard[i, j] = CountPossibleMoves(i, j);
+//             }
+//         }
+//     }
+
+//     static int CountPossibleMoves(int x, int y)
+//     {
+//         int possibleMoves = 0;
+//         for (int i = 0; i < 8; i++)
+//         {
+//             int newX = x + dx[i];
+//             int newY = y + dy[i];
+//             if (IsValidMove(newX, newY))
+//                 possibleMoves++;
+//         }
+
+//         return possibleMoves;
+//     }
+
+//     static void PrintChessboard(int[,] chessboard, int knightX, int knightY)
+//     {
+//         for (int i = 0; i < 8; i++)
+//         {
+//             for (int j = 0; j < 8; j++)
+//             {
+//                 if (i == knightX && j == knightY)
+//                 {
+//                     Console.Write("  # ");
+//                 }
+//                 else
+//                 {
+//                     Console.Write(chessboard[i, j].ToString().PadLeft(3) + " ");
+//                 }
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+// }
