@@ -625,3 +625,158 @@ classroom.
 //         }
 //     }
 // }
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+/* 
+Task9. ax2 +bx +c=0. Solve the quadratic equation by methods and return x1, x2 . 
+1.With ref parameters.
+2. With Tuple 
+3.With Array 
+4.With Deconstructing in class.
+*/
+
+// class QarakusiHavasarum
+// {
+//     public static void Solve(double a, double b, double c, ref double x1, ref double x2)
+//     {
+//         double discriminant = b * b - 4 * a * c;
+
+//         if (discriminant >= 0)
+//         {
+//             x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+//             x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+//         }
+//         else
+//         {
+//             Console.WriteLine("No roots:");
+//         }
+//     }
+
+//     static void Main()
+//     {
+//         double a = 1, b = -3, c = 2;
+//         double x1 = 0, x2 = 0;
+
+//         Solve(a, b, c, ref x1, ref x2);
+
+//         Console.WriteLine($"Root 1: {x1}, Root 2: {x2}");
+//     }
+// }
+
+
+//---------------------------
+
+
+// class QarakusiHavasarum
+// {
+//     public static (double, double) Solve(double a, double b, double c)
+//     {
+//         double discriminant = b * b - 4 * a * c;
+
+//         if (discriminant >= 0)
+//         {
+//             double x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+//             double x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+//             return (x1, x2);
+//         }
+//         else
+//         {
+//             Console.WriteLine("No roots:");
+//             return (0, 0);
+//         }
+//     }
+
+//     static void Main()
+//     {
+//         double a = 1, b = -3, c = 2;
+
+//         var roots = Solve(a, b, c);
+
+//         Console.WriteLine($"Root 1: {roots.Item1}, Root 2: {roots.Item2}");
+//     }
+// }
+
+//-----------
+
+// class QarakusiHavasarum
+// {
+//     public static double[] Solve(double a, double b, double c)
+//     {
+//         double[] roots = new double[2];
+//         double discriminant = b * b - 4 * a * c;
+
+//         if (discriminant >= 0)
+//         {
+//             roots[0] = (-b + Math.Sqrt(discriminant)) / (2 * a);
+//             roots[1] = (-b - Math.Sqrt(discriminant)) / (2 * a);
+//         }
+//         else
+//         {
+//             Console.WriteLine("No roots: ");
+//         }
+
+//         return roots;
+//     }
+
+//     static void Main()
+//     {
+//         double a = 1, b = -3, c = 2;
+
+//         double[] roots = Solve(a, b, c);
+
+//         Console.WriteLine($"Root 1: {roots[0]}, Root 2: {roots[1]}");
+//     }
+// }
+//---------
+
+
+// using System;
+
+// class QarakusiHavasarum
+// {
+//     public class Roots
+//     {
+//         public double X1 { get; }
+//         public double X2 { get; }
+
+//         public Roots(double x1, double x2)
+//         {
+//             X1 = x1;
+//             X2 = x2;
+//         }
+//     }
+
+//     public static Roots Solve(double a, double b, double c)
+//     {
+//         double discriminant = b * b - 4 * a * c;
+
+//         if (discriminant >= 0)
+//         {
+//             double x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+//             double x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+//             return new Roots(x1, x2);
+//         }
+//         else
+//         {
+//             Console.WriteLine("No roots: ");
+//             return new Roots(0, 0);
+//         }
+//     }
+
+//     static void Main()
+//     {
+//         double a = 1, b = -3, c = 2;
+
+//         var (root1, root2) = Solve(a, b, c);
+
+//         Console.WriteLine($"Root 1: {root1}, Root 2: {root2}");
+//     }
+// }
