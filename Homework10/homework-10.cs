@@ -1,37 +1,36 @@
-<Window x:Class="Autopropertys_in_class.MainWindow"
+<Window x:Class="AppC.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Autopropertys_in_class"
+        xmlns:local="clr-namespace:AppC"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#F08080" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="800" Background="#14213D" ResizeMode="NoResize">
     <Grid>
-        <TextBox x:Name="OutputBox" HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" VerticalAlignment="Center" Width="340" Text="" IsReadOnly="True" FontSize="18" TextChanged="OutputBox_TextChanged"/>
-        <Button x:Name="Input_Button" Content="Input" HorizontalAlignment="Left" Height="31" Margin="410,103,0,0" VerticalAlignment="Top" Width="140" Click="Input_Button_Click" FontSize="18"/>
-        <Button x:Name="Sort_Age_Button" Content="Sort by age" HorizontalAlignment="Left" Height="31" Margin="610,147,0,0" VerticalAlignment="Top" Width="140" Click="Sort_Age_Button_Click" FontSize="18"/>
-        <Button x:Name="Sort_Name_Button" Content="Sort by name" HorizontalAlignment="Left" Height="31" Margin="410,193,0,0" VerticalAlignment="Top" Width="140" Click="Sort_Name_Button_Click" FontSize="18"/>
-        <Button x:Name="Search_Age_Button" Content="Search by age" HorizontalAlignment="Left" Height="31" Margin="610,103,0,0" VerticalAlignment="Top" Width="140" Click="Search_Age_Button_Click" FontSize="18"/>
-        <Button x:Name="Search_Name_Button" Content="Search by name" HorizontalAlignment="Left" Height="31" Margin="410,147,0,0" VerticalAlignment="Top" Width="140" Click="Search_Name_Button_Click" FontSize="18"/>
-        <Button x:Name="Delete_ID_Button" Content="Delete ID" HorizontalAlignment="Left" Height="31" Margin="610,193,0,0" VerticalAlignment="Top" Width="140" Click="Delete_ID_Button_Click" FontSize="18"/>
-        <TextBox x:Name="NameInputBox" HorizontalAlignment="Left" Height="31" Margin="489,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="18"/>
-        <TextBox x:Name="InstructionBox" HorizontalAlignment="Left" Height="166" Margin="410,258,0,0" VerticalAlignment="Top" Width="340" Text="1) Input name and age&#xA;2) Input age&#xA;3) Input name&#xA;4) Input age&#xA;5) Input name&#xA;6) Input ID" IsReadOnly="True" Background="#FA8072" FontSize="18"/>
-        <TextBox x:Name="AgeInputBox" HorizontalAlignment="Left" Height="31" Margin="664,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" TextChanged="AgeInputBox_TextChanged"/>
-        <TextBox x:Name="IDInputBox" HorizontalAlignment="Left" Height="31" Margin="410,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="410,16,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="70" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="489,16,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="99" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="664,16,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="70" FontSize="20"/>
+        <TextBox x:Name="OutputBox" HorizontalAlignment="Left" Height="385" Margin="354,21,0,0" Background="#FCA311" VerticalAlignment="Top" Width="419" Text="" IsReadOnly="True" FontSize="18" TextChanged="OutputBox_TextChanged"/>
+        <Button x:Name="Input_Button" Content="Input" HorizontalAlignment="Left" Height="31" Margin="18,285,0,0" VerticalAlignment="Top" Width="140" Click="Input_Button_Click" FontSize="18"/>
+        <Button x:Name="Sort_Age_Button" Content="Sort by age" HorizontalAlignment="Left" Height="31" Margin="181,329,0,0" VerticalAlignment="Top" Width="140" Click="Sort_Age_Button_Click" FontSize="18"/>
+        <Button x:Name="Sort_Name_Button" Content="Sort by name" HorizontalAlignment="Left" Height="31" Margin="18,375,0,0" VerticalAlignment="Top" Width="140" Click="Sort_Name_Button_Click" FontSize="18"/>
+        <Button x:Name="Search_Age_Button" Content="Search by age" HorizontalAlignment="Left" Height="31" Margin="181,285,0,0" VerticalAlignment="Top" Width="140" Click="Search_Age_Button_Click" FontSize="18"/>
+        <Button x:Name="Search_Name_Button" Content="Search by name" HorizontalAlignment="Left" Height="31" Margin="18,329,0,0" VerticalAlignment="Top" Width="140" Click="Search_Name_Button_Click" FontSize="18"/>
+        <Button x:Name="Delete_ID_Button" Content="Delete ID" HorizontalAlignment="Left" Height="31" Margin="181,375,0,0" VerticalAlignment="Top" Width="140" Click="Delete_ID_Button_Click" FontSize="18"/>
+        <TextBox x:Name="NameInputBox" HorizontalAlignment="Left" Height="31" Margin="26,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="18"/>
+        <TextBox x:Name="AgeInputBox" HorizontalAlignment="Left" Height="31" Margin="26,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" TextChanged="AgeInputBox_TextChanged"/>
+        <TextBox x:Name="IDInputBox" HorizontalAlignment="Left" Height="31" Margin="26,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="26,21,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="70" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="26,97,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="99" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="26,176,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="70" FontSize="20" Foreground="White"/>
     </Grid>
 </Window>
 
 
-//---------------------------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------------------------------------
 using System;
 using System.Linq;
 using System.Windows;
 
-namespace Autopropertys_in_class
+namespace AppC
 {
 
     public class Person
