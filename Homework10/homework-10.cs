@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="#14213D" ResizeMode="NoResize">
     <Grid>
-        <TextBox x:Name="OutputBox" HorizontalAlignment="Left" Height="385" Margin="354,21,0,0" Background="#FCA311" VerticalAlignment="Top" Width="419" Text="" IsReadOnly="True" FontSize="18" TextChanged="OutputBox_TextChanged"/>
+        <TextBox x:Name="OutputBox" HorizontalAlignment="Left" Height="385" Margin="354,21,0,0" Background="#FCA311" VerticalAlignment="Top" Width="419" Text="" IsReadOnly="True" FontSize="18" />
         <Button x:Name="Input_Button" Content="Input" HorizontalAlignment="Left" Height="31" Margin="18,285,0,0" VerticalAlignment="Top" Width="140" Click="Input_Button_Click" FontSize="18"/>
         <Button x:Name="Sort_Age_Button" Content="Sort by age" HorizontalAlignment="Left" Height="31" Margin="181,329,0,0" VerticalAlignment="Top" Width="140" Click="Sort_Age_Button_Click" FontSize="18"/>
         <Button x:Name="Sort_Name_Button" Content="Sort by name" HorizontalAlignment="Left" Height="31" Margin="18,375,0,0" VerticalAlignment="Top" Width="140" Click="Sort_Name_Button_Click" FontSize="18"/>
@@ -15,13 +15,12 @@
         <Button x:Name="Search_Name_Button" Content="Search by name" HorizontalAlignment="Left" Height="31" Margin="18,329,0,0" VerticalAlignment="Top" Width="140" Click="Search_Name_Button_Click" FontSize="18"/>
         <Button x:Name="Delete_ID_Button" Content="Delete ID" HorizontalAlignment="Left" Height="31" Margin="181,375,0,0" VerticalAlignment="Top" Width="140" Click="Delete_ID_Button_Click" FontSize="18"/>
         <TextBox x:Name="NameInputBox" HorizontalAlignment="Left" Height="31" Margin="26,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontSize="18"/>
-        <TextBox x:Name="AgeInputBox" HorizontalAlignment="Left" Height="31" Margin="26,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" TextChanged="AgeInputBox_TextChanged"/>
+        <TextBox x:Name="AgeInputBox" HorizontalAlignment="Left" Height="31" Margin="26,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" />
         <TextBox x:Name="IDInputBox" HorizontalAlignment="Left" Height="31" Margin="26,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" FontSize="18"/>
         <TextBlock HorizontalAlignment="Left" Height="32" Margin="26,21,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="70" FontSize="20" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Height="32" Margin="26,97,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="99" FontSize="20" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Height="32" Margin="26,176,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top" Width="70" FontSize="20" Foreground="White"/>
     </Grid>
-</Window>
 
 
 
@@ -197,15 +196,3 @@ namespace AppC
                 IDInputBox.Text = "Invalid";
             }
         }
-
-        private void OutputBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-
-        }
-
-        private void AgeInputBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-
-        }
-    }
-}
